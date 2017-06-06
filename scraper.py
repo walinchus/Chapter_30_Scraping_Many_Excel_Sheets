@@ -29,13 +29,8 @@ for sheetnum in sheetsrange:
     #put each row number in 'rownumber' as you loop
  for rownumber in range(15, sheet.nrows):
    print rownumber
-   record['SHA'] = sheet.row_values(rownumber)[1]
-   record['Code'] = sheet.row_values(rownumber)[2]
-   record['Name'] = sheet.row_values(rownumber)[3]
-   record['date1'] = sheet.row_values(rownumber)[4]
-   record['date2'] = sheet.row_values(rownumber)[5]
    for column in range(1,sheet.ncols):
-    record['date3'] = sheet.row_values(rownumber)[column]
+    record[keys[column]] = sheet.row_values(rownumber)[column]
    record['title'] = title[2]
    id+=1
    record['id'] = id
