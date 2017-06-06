@@ -36,8 +36,8 @@ for sheetnum in sheetsrange:
    record['date2'] = sheet.row_values(rownumber)[5]
    record['date3'] = sheet.row_values(rownumber)[6]
    record['title'] = title[2]
-    id+=1
-    record['id'] = id
-    print "---", record
-    scraperwiki.sqlite.save(['id'], record)
+   id+=1
+   record['id'] = id
+   print "---", record
+   scraperwiki.sqlite.save(['id'], record)
         
