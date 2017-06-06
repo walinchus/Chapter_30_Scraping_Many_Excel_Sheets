@@ -34,7 +34,8 @@ for sheetnum in sheetsrange:
    record['Name'] = sheet.row_values(rownumber)[3]
    record['date1'] = sheet.row_values(rownumber)[4]
    record['date2'] = sheet.row_values(rownumber)[5]
-   record['date3'] = sheet.row_values(rownumber)[6]
+   for column in range(1,sheet.ncols):
+    record['date3'] = sheet.row_values(rownumber)[column]
    record['title'] = title[2]
    id+=1
    record['id'] = id
